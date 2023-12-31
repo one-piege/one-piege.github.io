@@ -1,9 +1,12 @@
 import fs from "fs";
+import { appendFile } from "node:fs/promises";
 
 const BASE_URL = "https://www.scan-vf.net/uploads/manga/one_piece/chapters";
 
 async function main() {
-  for (let chapter_number = 1; chapter_number <= 20; chapter_number++) {
+  let totalSize = 0;
+
+  for (let chapter_number = 1; chapter_number <= 1000; chapter_number++) {
     let screen_number = 1;
     while (true) {
       const parsedScreenNumber = screen_number.toString().padStart(2, "0");
@@ -12,7 +15,13 @@ async function main() {
       const response = await fetch(URL);
 
       if (response.status === 404) {
-        console.log(`Chapter ${chapter_number} is over`);
+        totalSize += (screen_number - 1) * 1200;
+        if (chapter_number === 1) {
+          Bun.write("./chapters.txt", totalSize.toString() + "\n");
+        } else {
+          await appendFile("./chapters.txt", totalSize.toString() + "\n");
+        }
+        console.log(`Chapter ${chapter_number}: ${totalSize}px`);
         break;
       }
 

@@ -3,7 +3,7 @@ import os
 
 totalGlobalHeight = 0
 
-for chapter in range(1, 21):
+for chapter in range(1, 1001):
   totalChapterHeight = 0
   folder = './images/chapitre-' + chapter.__str__()
   _, _, files = next(os.walk(folder))
@@ -11,6 +11,6 @@ for chapter in range(1, 21):
 
   totalChapterHeight = file_count * 1200
   totalGlobalHeight += totalChapterHeight
-  print('Chapitre ' + chapter.__str__() + ': ' + totalGlobalHeight.__str__() + 'px')
+  print('Chapitre| ' + chapter.__str__() + ': ' + totalGlobalHeight.__str__() + 'px')
 
 print('Total: ' + totalGlobalHeight.__str__() + 'px')
