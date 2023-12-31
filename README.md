@@ -1,20 +1,9 @@
-# onepiece-data
+# One Piece on one page
 
-To install dependencies:
+## Visit [one-piege.com](https://one-piege.com) (1000 chapters)
 
-```bash
-bun install
-```
+Chapters 200 to 226 included missing
 
-To run:
+Chapter 851 missing but gatherable
 
-```bash
-bun run index.ts
-```
-
-This project was created using `bun init` in bun v[5:0]u8@1071c5c56. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
-
-200-226 inclus manquants
-851 manquant mais récupérable
-
-16777216px est le max en taille sur les browsers ??
+> ⚠️ **You won't see all One Piece** Depending of your browser there is a size limit. Chromium based are 16777216px ?
