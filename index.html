@@ -10,11 +10,25 @@
       width: 100%;
       object-fit: contain;
     }
+    #sorry_message {
+      position: absolute;
+      top: 16777100px;
+      background: white;
+      text-align: center;
+      width: 100%;
+      z-index: 1;
+      font-family: fantasy;
+      font-size: 1.3rem;
+    }
+
   </style>
 </head>
 
 <body style="width: 100%; background-color: antiquewhite;">
-  <div style="height: 21020400px;"></div>
+  <div style="height: 21020400px;">
+    <div id="sorry_message">
+      <p>Malheureusement, les navigateurs ont une limite de taille de page (16777216px), donc je ne peux pas vous montrer plus sur la même page.</p>
+    </div></div>
   <div id="chapters-container" style="position: absolute; top: 0; width: 100%; align-items: center; display: flex; flex-direction: column;">
   </div>
   <script src="./script.js"></script>
