@@ -6,4 +6,4 @@ Chapters 200 to 226 included missing
 
 Chapter 851 missing but gatherable
 
-> ⚠️ **You won't see all One Piece** Depending of your browser there is a size limit. Chromium based are 16777216px ?
+> ⚠️ **You won't see all One Piece** Depending of your screen there is a size limit. Macbook are 16777216px ?

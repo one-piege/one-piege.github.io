@@ -167,12 +167,10 @@ function getCurrentScrollInfos() {
 }
 
 function unloadChapter(chapterIndex) {
-  // console.log("Unload chapter ", chapterIndex + 1);
   document.getElementById("chapter-" + (chapterIndex + 1))?.remove();
 }
 
 function loadChapter(chapterIndex, isAtTheEnd = false) {
-  // console.log("Load chapter ", chapterIndex + 1);
   const chapter = document.getElementById("chapter-" + (chapterIndex + 1));
   if (chapter) return;
 
@@ -189,9 +187,6 @@ function loadChapter(chapterIndex, isAtTheEnd = false) {
     image.src = `https://www.scan-vf.net/uploads/manga/one_piece/chapters/chapitre-${
       chapterIndex + 1
     }/${i.toString().padStart(2, "0")}.webp`;
-    // image.src = `./images/chapitre-${chapterIndex + 1}/${i
-    //   .toString()
-    //   .padStart(2, "0")}.webp`;
     image.onerror = () => image.remove();
     newChapter.append(image);
   }
@@ -203,7 +198,6 @@ function loadChapter(chapterIndex, isAtTheEnd = false) {
 }
 
 function updateDivPosition(previousChapterSizes) {
-  // console.log("Set top to ", previousChapterSizes);
   document.getElementById("chapters-container").style.top =
     previousChapterSizes + "px";
 }
@@ -223,13 +217,6 @@ function calculateWhereIAm() {
     unloadChapter(chapterIndex + 1);
     updateDivPosition(chapters[chapterIndex - 1] || 0);
   }
-
-  // console.log(
-  //   "Chapter",
-  //   chapterIndex + 1,
-  //   `${Math.round(chapterPercentage)}%`,
-  //   "\n-------"
-  // );
 }
 
 function initialLoad() {
